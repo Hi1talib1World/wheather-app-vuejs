@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>/>
     <main>
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
         <img alt="Vue logo" src="./assets/logo.png" width="50px">
@@ -89,12 +89,12 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import { mapState, mapActions, mapMutations } from "vuex";
-
+import card from './components/cards/card.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    card
   }
 }
 </script>
