@@ -89,6 +89,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import { mapState, mapActions, mapMutations } from "vuex";
 
 export default {
   name: 'App',
