@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>/>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
     <main>
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
         <img alt="Vue logo" src="./assets/logo.png" width="50px">
@@ -67,6 +67,8 @@
       </nav>
       <router-view/>
     </main>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <card/>
     <footer class="container-fluid footer text-left mt-3">
       <p class="mr-auto">
         Developed by:
@@ -88,15 +90,62 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex";
+import {
+  isLoggedIn,
+  getLoggedInUser
+} from "./components/shared/service/authService";
 import HelloWorld from './components/HelloWorld.vue'
 import card from './components/cards/card.vue'
+
+
 export default {
+  data() {
+    return {
+      cartValue: 0
+    }
+  },
   name: 'App',
   components: {
     HelloWorld,
     card
+  },
+  computed: mapState(["cartProducts", "loggedUser"]),
+  methods: {
+    /* Initially loading the cart products from local storage */
+
+    ...mapMutations(["SET_CART_PRODUCTS", "ADD_LOGGED_USER"]),
+
+    getLocalProducts() {
+      const products = JSON.parse(localStorage.getItem("iki-cart"));
+
+      if (products) {
+        this.SET_CART_PRODUCTS(products);
+      }
+    },
+
+    isLogged() {
+      return isLoggedIn();
+    },
+
+    loc_logout() {
+      localStorage.removeItem("_auth");
+      this.$router.push("/");
+      location.reload();
+    }
+  },
+  created() {
+    this.getLocalProducts();
+
+    const loggedUser = getLoggedInUser();
+
+    this.ADD_LOGGED_USER(loggedUser);
+
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.VUE_APP_BASE_URL);
   }
-}
+};
+
 </script>
 
 <style>
