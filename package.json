@@ -12,6 +12,8 @@
     "core-js": "^3.6.4",
     "react-sidebar-ui": "^1.2.1",
     "vue": "^2.6.11",
+    "vue-sidebar-menu-akahon": "^0.1.4",
+    "vue-videobg": "^2.0.0",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
