@@ -3,6 +3,9 @@
     <sidebar-menu 
       @search-input-emit="search"
     />
+    <video-bg :sources="['/src/assets/ice.mp4']" img="demo/assets/bg.jpg">
+      <!-- If you want to add content here, a slot is waiting! -->
+    </video-bg>
   </div>
 </template>
 
