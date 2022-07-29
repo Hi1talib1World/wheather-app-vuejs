@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  
+  <div>
+    <sidebar-menu 
+      @search-input-emit="search"
+    />
   </div>
 </template>
 
 <script>
+import SidebarMenu from "@/components/Sidebar-menu.vue"
 
 
 
@@ -17,7 +19,7 @@ export default {
   },
   name: 'App',
   components: {
-    
+    SidebarMenu,
     
   }
  
