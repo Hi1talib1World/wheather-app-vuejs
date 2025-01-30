@@ -141,54 +141,55 @@
       menuItems: {
         type: Array,
         default: () => [
-          {
-            link: '/Map',
-            name: 'Map',
-            tooltip: 'Dashboard',
-            icon: 'bx-grid-alt',
-          },
-          {
-            link: '#',
-            name: 'User',
-            tooltip: 'User',
-            icon: 'bx-user',
-          },
-          {
-            link: '#',
-            name: 'Messages',
-            tooltip: 'Messages',
-            icon: 'bx-chat',
-          },
-          {
-            link: '#',
-            name: 'Analytics',
-            tooltip: 'Analytics',
-            icon: 'bx-pie-chart-alt-2',
-          },
-          {
-            link: '#',
-            name: 'File Manager',
-            tooltip: 'Files',
-            icon: 'bx-folder',
-          },
-          {
-            link: '#',
-            name: 'Order',
-            tooltip: 'Order',
-            icon: 'bx-cart-alt',
-          },
-          {
-            link: '#',
-            name: 'Saved',
-            tooltip: 'Saved',
-            icon: 'bx-heart',
-          },
-          {
-            link: '#',
-            name: 'Setting',
-            tooltip: 'Setting',
-            icon: 'bx-cog',
-          },
+          
+        {
+          link: "/map",
+          name: "Live Weather Map",
+          tooltip: "View live weather satellite",
+          icon: "bx-map",
+        },
+        {
+          link: "/forecast",
+          name: "Weather Forecast",
+          tooltip: "7-day weather predictions",
+          icon: "bx-cloud-lightning",
+        },
+        {
+          link: "/alerts",
+          name: "Weather Alerts",
+          tooltip: "Severe weather warnings",
+          icon: "bx-bell",
+        },
+        {
+          link: "/radar",
+          name: "Radar & Satellite",
+          tooltip: "View real-time radar data",
+          icon: "bx-radar",
+        },
+        {
+          link: "/historical",
+          name: "Historical Weather",
+          tooltip: "Past climate data",
+          icon: "bx-time",
+        },
+        {
+          link: "/climate",
+          name: "Climate Trends",
+          tooltip: "Long-term climate analysis",
+          icon: "bx-bar-chart-alt-2",
+        },
+        {
+          link: "/favorites",
+          name: "Saved Locations",
+          tooltip: "Your favorite cities",
+          icon: "bx-heart",
+        },
+        {
+          link: "/settings",
+          name: "Settings",
+          tooltip: "Customize preferences",
+          icon: "bx-cog",
+        },
         ],
       },
       
@@ -204,7 +205,7 @@
       },
       profileRole: {
         type: String,
-        default: 'Frontend vue developer',
+        default: 'Hichamoutaleb7@gmail.com',
       },
       isExitButton: {
         type: Boolean,
