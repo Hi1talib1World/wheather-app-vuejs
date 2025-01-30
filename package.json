@@ -9,11 +9,15 @@
   },
   "dependencies": {
     "algoliasearch": "^4.12.1",
+    "axios": "^1.7.9",
     "core-js": "^3.6.4",
+    "leaflet": "^1.9.4",
     "react-sidebar-ui": "^1.2.1",
     "vue": "^2.6.11",
+    "vue-router": "^3.6.5",
     "vue-sidebar-menu-akahon": "^0.1.4",
     "vue-videobg": "^2.0.0",
+    "vue2-leaflet": "^2.7.1",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
