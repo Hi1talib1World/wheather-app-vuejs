@@ -2,12 +2,16 @@
   <div>
     <sidebar-menu 
       @search-input-emit="search"
-    />
-    //here
+      
+    >
+    <router-view />
+    </sidebar-menu>
+  <Home></Home>
   </div>
 </template>
 
 <script>
+import Home from "@/components/Home.vue"
 import SidebarMenu from "@/components/Sidebar-menu.vue"
 
 
@@ -21,6 +25,7 @@ export default {
   name: 'App',
   components: {
     SidebarMenu,
+    Home,
     
   }
  
