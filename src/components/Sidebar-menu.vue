@@ -142,7 +142,7 @@
         type: Array,
         default: () => [
           {
-            link: '#',
+            link: '/Map',
             name: 'Map',
             tooltip: 'Dashboard',
             icon: 'bx-grid-alt',
@@ -191,19 +191,8 @@
           },
         ],
       },
-      //! Search
-      isSearch: {
-        type: Boolean,
-        default: true,
-      },
-      searchPlaceholder: {
-        type: String,
-        default: 'Search...',
-      },
-      searchTooltip: {
-        type: String,
-        default: 'Search',
-      },
+      
+      
       //! Profile detailes
       profileImg: {
         type: String,
