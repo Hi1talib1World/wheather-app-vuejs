@@ -115,7 +115,7 @@
       },
       menuTitle: {
         type: String,
-        default: 'Akahon',
+        default: 'Weather Now',
       },
       menuLogo: {
         type: String,
@@ -211,7 +211,7 @@
       },
       profileName: {
         type: String,
-        default: 'Fayzullo Saidakbarov',
+        default: 'Hicham Outaleb',
       },
       profileRole: {
         type: String,
